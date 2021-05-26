@@ -12,7 +12,7 @@ This files has two functions, that check either on the multiplicative or additiv
 Both method requires a pretrained Flux model, and training dataset.  C is used to vary the Constant 
 values that are used in the check. By default, C=1
 
-## symmetry_check.jk
+## symmetry_check.jl
 ___
 This files has 4 functions, each of the them checks on the translational symmetry attribute. 
 the function takes in a preptrained Flux model, and training datasets. On top of it, it also takes in validation loss 

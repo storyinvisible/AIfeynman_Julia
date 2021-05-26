@@ -1,4 +1,4 @@
-include("utility.jl")
+include("../Utils/utility.jl")
 using Flux
 
 function check_additive(model, input_x, ground_truth_y,c=1.0)

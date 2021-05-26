@@ -1,4 +1,4 @@
-include("utility.jl")
+include("../Utils/utility.jl")
 function check_translational_symmetry_minus(model, input_x, ground_truth_y, val_error,c=1)
     model= model|>cpu
     input_x=input_x|>cpu
