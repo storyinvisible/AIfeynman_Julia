@@ -11,7 +11,7 @@ function check_translational_symmetry_minus(model, input_x, ground_truth_y, val_
 
         return (-1,-1,-1)
     end
-    min_error = 1000
+    min_error = 100000
     best_i = -1
     best_j = -1
     best_mu = 0
@@ -38,7 +38,7 @@ function check_translational_symmetry_minus(model, input_x, ground_truth_y, val_
             print(" Error :")
             println(error)
             print("  Median Error ")
-            errors= broadcast(abs,ground_truth_y-sm)
+            errors= broadcast(abs,ground_truth_y.-sm)
             median_error= median(errors)
             println(median_error)
             if min_error >error
@@ -69,7 +69,7 @@ function check_translational_symmetry_divide(model, input_x, ground_truth_y, val
 
         return (-1,-1,-1)
     end
-    min_error = 1000
+    min_error = 100000
     best_i = -1
     best_j = -1
     best_mu = 0
@@ -95,7 +95,7 @@ function check_translational_symmetry_divide(model, input_x, ground_truth_y, val
             print(" Error :")
             println(error)
             print("  Median Error ")
-            errors= broadcast(abs,ground_truth_y-sm)
+            errors= broadcast(abs,ground_truth_y.-sm)
             median_error= median(errors)
             println(median_error)
             if min_error >error
@@ -121,7 +121,7 @@ function check_translational_symmetry_multiply(model, input_x, ground_truth_y, v
 
         return (-1,-1,-1)
     end
-    min_error = 1000
+    min_error = 100000
     best_i = -1
     best_j = -1
     best_mu = 0
@@ -147,7 +147,7 @@ function check_translational_symmetry_multiply(model, input_x, ground_truth_y, v
             print(" Error :")
             print(error)
             print("  Median Error ")
-            errors= broadcast(abs,ground_truth_y-sm)
+            errors= broadcast(abs,ground_truth_y.-sm)
             median_error= median(errors)
             println(median_error)
             if min_error >error
@@ -174,7 +174,7 @@ function check_translational_symmetry_plus(model, input_x, ground_truth_y, val_e
 
         return (-1,-1,-1)
     end
-    min_error = 1000
+    min_error = 100000
     best_i = -1
     best_j = -1
     best_mu = 0
@@ -200,7 +200,7 @@ function check_translational_symmetry_plus(model, input_x, ground_truth_y, val_e
             print(" Error :")
             println(error)
             print("  Median Error ")
-            errors= broadcast(abs,ground_truth_y-sm)
+            errors= broadcast(abs,ground_truth_y.-sm)
             median_error= median(errors)
             println(median_error)
             if min_error >error
